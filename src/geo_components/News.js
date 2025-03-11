@@ -142,7 +142,7 @@ export class News extends Component {
     }
   }
   async componentDidMount() {
-    let url = " https://newsapi.org/v2/top-headlines?country=us&apiKey=2f8d6d0efe254d5da6335a44e5b4226b";
+    let url = " http://newsapi.org/v2/top-headlines?country=us&apiKey=2f8d6d0efe254d5da6335a44e5b4226b";
     let data = await fetch(url);
     let parsedData = await data.json();
 
