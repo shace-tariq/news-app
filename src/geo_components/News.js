@@ -142,7 +142,8 @@ export class News extends Component {
     }
   }
   async componentDidMount() {
-    let url = " https://newsapi.org/v2/top-headlines?country=us&apiKey=2f8d6d0efe254d5da6335a44e5b4226b";
+    let url = " https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=a5ab0396b0e520683560f43467d9635d";
+    // let url = " https://newsapi.org/v2/top-headlines?country=us&apiKey=2f8d6d0efe254d5da6335a44e5b4226b";
     let data = await fetch(url);
     let parsedData = await data.json();
 
@@ -158,7 +159,7 @@ export class News extends Component {
             
             return  <div className='col-md-4' key ={element.newsUrl} >
 
-            <NewsItem title={element.title?element.title:""} description={element.description?element.description:""} imageUrl={element.urlToImage} newsUrl={element.url}/>
+            <NewsItem title={element.title?element.title:""} description={element.description?element.description:""} imageUrl={element.image} newsUrl={element.url}/>
            </div> })}
         
 
